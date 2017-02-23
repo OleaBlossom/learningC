@@ -1,12 +1,15 @@
-// Ask the user to input an integer; display the integer
+// Ask the user to input two integera; display the sum
 #include <stdio.h>
 
 int main()
 {
-	int x;
+	int x, y;
 
-	printf("Please enter an integer.\n");
+	printf("Give me two integers, and I'll add them together.\n");
+	printf("Please enter your first integer.\n");
 	scanf("%d", &x);
-	printf("The number you entered is: %d\n", x);
+	printf("Please enter your second integer.\n");
+	scanf("%d", &y);
+	printf("The sum of your numbers is: %d\n", x + y);
 	return 0;
-}
+} // end function main
