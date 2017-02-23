@@ -1,10 +1,12 @@
-// Show the difference between the value and address in memory of x
+// Ask the user to input an integer; display the integer
 #include <stdio.h>
 
 int main()
 {
-	int x = 15;
+	int x;
 
-	printf("The value of x is: %d\n", x);
-	printf("The address of of x is: %p\n", &x);
+	printf("Please enter an integer.\n");
+	scanf("%d", &x);
+	printf("The number you entered is: %d\n", x);
+	return 0;
 }
