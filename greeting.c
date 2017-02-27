@@ -2,14 +2,24 @@
 
 /* preprocessor instructions */
 #include <stdio.h>
+#include <string.h>
 
-/* main program */
+/* Greet only Alice or Bob */
 int main()
 {
 	char name[60];
 
-	printf("Please enter the name by which you would like to be greeted.\n");
+	printf("Please enter your name.\n");
 	scanf("%59[0-9a-zA-Z ]", name);
-	printf("Hello %s.\n", name);
+	if (strcmp(name, "Alice") == 0) {
+		printf("Hello %s.\n", name);
+	}
+	else if (strcmp(name, "Bob") == 0) {
+		printf("Hello %s.\n", name);
+	}
+	else {
+		printf("Please see your administrator for user privileges.\n");
+
+	}
 	return 0;
 } // end function main
