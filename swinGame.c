@@ -5,20 +5,36 @@
 int main()
 {
     open_graphics_window("Hello World", 800, 600);
-    show_swin_game_splash_screen();
+ //   show_swin_game_splash_screen();
     
     do
     {
         process_events();
         
-        clear_screen_to(ColorWhite);
+        clear_screen_to(ColorAntiqueWhite);
 
+        // draw two scoops of ice cream in a cone
+        fill_circle(ColorMagenta, 400, 300, 100);
+        fill_triangle(ColorBurlyWood, 300, 350, 500, 350, 400, 550);
+        fill_circle(ColorRed, 400, 200, 100);
+        fill_ellipse(ColorMagenta, 308, 225, 185, 80);
 
-        fill_circle(ColorDarkOrange, 400, 200, 100);
-        fill_rectangle(ColorBlack, 350, 170, 20, 20);
-        fill_rectangle(ColorBlack, 430, 170, 20, 20);
-        fill_triangle(ColorBlack, 400, 180, 375, 230, 420, 230);
-        fill_ellipse(ColorBlack, 375, 250, 50, 20);
+        // draw sprinkles
+        int w = 8;
+        int h = 4;
+        fill_ellipse(ColorFuchsia,     400, 115, w, h);
+        fill_ellipse(ColorLawnGreen,   403, 131, w, h);
+        fill_ellipse(ColorDeepSkyBlue, 386, 115, w, h);
+        fill_ellipse(ColorLawnGreen,   348, 122, w, h);
+        fill_ellipse(ColorGold,        369, 108, w, h);
+        fill_ellipse(ColorFuchsia,     448, 118, w, h);
+        fill_ellipse(ColorDeepSkyBlue, 425, 115, w, h);
+        fill_ellipse(ColorLawnGreen,   412, 108, w, h);
+        fill_ellipse(ColorDeepSkyBlue, 369, 128, w, h);
+        fill_ellipse(ColorDeepSkyBlue, 436, 128, w, h);
+        fill_ellipse(ColorGold,        392, 103, w, h);
+        fill_ellipse(ColorFuchsia,     328, 136, w, h);
+        fill_ellipse(ColorGold,        461, 136, w, h);
 
         refresh_screen(60);
 
